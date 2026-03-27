@@ -1,0 +1,476 @@
+@prefix : <http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/> .
+@prefix ex: <https://example.org/traffic/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix schema: <https://schema.org/> .
+@base <http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/> .
+
+<https://example.org/traffic-accident-ontology> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://example.org/traffic-accident-ontology#hasCause
+:hasCause rdf:type owl:ObjectProperty ;
+          rdfs:domain [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasTrafficControlDevice ;
+                        owl:someValuesFrom :Accident
+                      ] ;
+          rdfs:range [ rdf:type owl:Restriction ;
+                       owl:onProperty :hasCause ;
+                       owl:someValuesFrom :Cause
+                     ] .
+
+
+###  https://example.org/traffic-accident-ontology#hasCrashType
+:hasCrashType rdf:type owl:ObjectProperty ;
+              rdfs:domain [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasCrashType ;
+                            owl:someValuesFrom :Accident
+                          ] ;
+              rdfs:range [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasCrashType ;
+                           owl:someValuesFrom :CrashType
+                         ] .
+
+
+###  https://example.org/traffic-accident-ontology#hasLightingCondition
+:hasLightingCondition rdf:type owl:ObjectProperty ;
+                      rdfs:domain [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasLightingCondition ;
+                                    owl:someValuesFrom :Accident
+                                  ] ;
+                      rdfs:range [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasLightingCondition ;
+                                   owl:someValuesFrom :LightingCondition
+                                 ] .
+
+
+###  https://example.org/traffic-accident-ontology#hasRoadCondition
+:hasRoadCondition rdf:type owl:ObjectProperty ;
+                  rdfs:domain [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasRoadCondition ;
+                                owl:someValuesFrom :Accident
+                              ] ;
+                  rdfs:range [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasRoadCondition ;
+                               owl:someValuesFrom :RoadCondition
+                             ] .
+
+
+###  https://example.org/traffic-accident-ontology#hasSeverity
+:hasSeverity rdf:type owl:ObjectProperty ;
+             rdfs:domain [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasSeverity ;
+                           owl:someValuesFrom :Accident
+                         ] ;
+             rdfs:range [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasSeverity ;
+                          owl:someValuesFrom :InjurySeverity
+                        ] .
+
+
+###  https://example.org/traffic-accident-ontology#hasTrafficControlDevice
+:hasTrafficControlDevice rdf:type owl:ObjectProperty ;
+                         rdfs:domain [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasTrafficControlDevice ;
+                                       owl:someValuesFrom :Accident
+                                     ] ;
+                         rdfs:range [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasTrafficControlDevice ;
+                                      owl:someValuesFrom :TrafficControlDevice
+                                    ] .
+
+
+###  https://example.org/traffic-accident-ontology#hasVehicle
+:hasVehicle rdf:type owl:ObjectProperty ;
+            rdfs:domain [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasVehicle ;
+                          owl:someValuesFrom :Accident
+                        ] ;
+            rdfs:range [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasVehicle ;
+                         owl:someValuesFrom :Vehicle
+                       ] .
+
+
+###  https://example.org/traffic-accident-ontology#hasWeatherCondition
+:hasWeatherCondition rdf:type owl:ObjectProperty ;
+                     rdfs:domain [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasWeatherCondition ;
+                                   owl:someValuesFrom :Accident
+                                 ] ;
+                     rdfs:range [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasWeatherCondition ;
+                                  owl:someValuesFrom :WeatherCondition
+                                ] .
+
+
+###  https://example.org/traffic-accident-ontology#occursAt
+:occursAt rdf:type owl:ObjectProperty ;
+          rdfs:domain [ rdf:type owl:Restriction ;
+                        owl:onProperty :occursAt ;
+                        owl:someValuesFrom :Accident
+                      ] ;
+          rdfs:range [ rdf:type owl:Restriction ;
+                       owl:onProperty :occursAt ;
+                       owl:someValuesFrom :Location
+                     ] .
+
+
+###  https://example.org/traffic-accident-ontology#occursAtTime
+:occursAtTime rdf:type owl:ObjectProperty ;
+              rdfs:domain [ rdf:type owl:Restriction ;
+                            owl:onProperty :occursAtTime ;
+                            owl:someValuesFrom :Accident
+                          ] ;
+              rdfs:range [ rdf:type owl:Restriction ;
+                           owl:onProperty :occursAt ;
+                           owl:someValuesFrom :TimeInstant
+                         ] .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://example.org/traffic-accident-ontology#accidentDateTime
+:accidentDateTime rdf:type owl:DatatypeProperty ;
+                  rdfs:domain [ rdf:type owl:Restriction ;
+                                owl:onProperty owl:topObjectProperty ;
+                                owl:someValuesFrom :Accident
+                              ] ;
+                  rdfs:range xsd:dateTime .
+
+
+###  https://example.org/traffic-accident-ontology#numberOfDeaths
+:numberOfDeaths rdf:type owl:DatatypeProperty ;
+                rdfs:domain [ rdf:type owl:Restriction ;
+                              owl:onProperty owl:topObjectProperty ;
+                              owl:someValuesFrom :Accident
+                            ] ;
+                rdfs:range xsd:integer .
+
+
+###  https://example.org/traffic-accident-ontology#numberOfInjured
+:numberOfInjured rdf:type owl:DatatypeProperty ;
+                 rdfs:domain [ rdf:type owl:Restriction ;
+                               owl:onProperty owl:topObjectProperty ;
+                               owl:someValuesFrom :Accident
+                             ] ;
+                 rdfs:range xsd:integer .
+
+
+###  https://example.org/traffic-accident-ontology#numberOfVehicles
+:numberOfVehicles rdf:type owl:DatatypeProperty ;
+                  rdfs:domain [ rdf:type owl:Restriction ;
+                                owl:onProperty owl:topObjectProperty ;
+                                owl:someValuesFrom :Accident
+                              ] ;
+                  rdfs:range xsd:integer .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://example.org/traffic-accident-ontology#Accident
+:Accident rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty owl:topObjectProperty ;
+                            owl:someValuesFrom :Event
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasVehicle ;
+                            owl:someValuesFrom :Vehicle
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasWeatherCondition ;
+                            owl:someValuesFrom :WeatherCondition
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :occursAtTime ;
+                            owl:someValuesFrom :TimeInstant
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasSeverity ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :InjurySeverity
+                          ] .
+
+
+###  https://example.org/traffic-accident-ontology#Cause
+:Cause rdf:type owl:Class .
+
+
+###  https://example.org/traffic-accident-ontology#CrashType
+:CrashType rdf:type owl:Class .
+
+
+###  https://example.org/traffic-accident-ontology#Event
+:Event rdf:type owl:Class .
+
+
+###  https://example.org/traffic-accident-ontology#FatalAccident
+:FatalAccident rdf:type owl:Class ;
+               rdfs:subClassOf :Accident .
+
+
+###  https://example.org/traffic-accident-ontology#FatalSeverity
+:FatalSeverity rdf:type owl:Class ;
+               rdfs:subClassOf :InjurySeverity .
+
+
+###  https://example.org/traffic-accident-ontology#InjuryAccident
+:InjuryAccident rdf:type owl:Class ;
+                rdfs:subClassOf :Accident .
+
+
+###  https://example.org/traffic-accident-ontology#InjurySeverity
+:InjurySeverity rdf:type owl:Class .
+
+
+###  https://example.org/traffic-accident-ontology#LightingCondition
+:LightingCondition rdf:type owl:Class .
+
+
+###  https://example.org/traffic-accident-ontology#Location
+:Location rdf:type owl:Class .
+
+
+###  https://example.org/traffic-accident-ontology#MinorSeverity
+:MinorSeverity rdf:type owl:Class ;
+               rdfs:subClassOf :InjurySeverity .
+
+
+###  https://example.org/traffic-accident-ontology#NoInjuryAccident
+:NoInjuryAccident rdf:type owl:Class ;
+                  rdfs:subClassOf :Accident .
+
+
+###  https://example.org/traffic-accident-ontology#NoInjurySeverity
+:NoInjurySeverity rdf:type owl:Class ;
+                  rdfs:subClassOf :InjurySeverity .
+
+
+###  https://example.org/traffic-accident-ontology#RoadCondition
+:RoadCondition rdf:type owl:Class .
+
+
+###  https://example.org/traffic-accident-ontology#SevereSeverity
+:SevereSeverity rdf:type owl:Class ;
+                rdfs:subClassOf :InjurySeverity .
+
+
+###  https://example.org/traffic-accident-ontology#TimeInstant
+:TimeInstant rdf:type owl:Class .
+
+
+###  https://example.org/traffic-accident-ontology#TrafficControlDevice
+:TrafficControlDevice rdf:type owl:Class .
+
+
+###  https://example.org/traffic-accident-ontology#Vehicle
+:Vehicle rdf:type owl:Class .
+
+
+###  https://example.org/traffic-accident-ontology#WeatherCondition
+:WeatherCondition rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://example.org/traffic-accident-ontology#Angle
+:Angle rdf:type owl:NamedIndividual ,
+                :CrashType .
+
+
+###  https://example.org/traffic-accident-ontology#Clear
+:Clear rdf:type owl:NamedIndividual ,
+                :WeatherCondition .
+
+
+###  https://example.org/traffic-accident-ontology#DarknessLightedRoad
+:DarknessLightedRoad rdf:type owl:NamedIndividual ,
+                              :LightingCondition .
+
+
+###  https://example.org/traffic-accident-ontology#DarknessUnlightedRoad
+:DarknessUnlightedRoad rdf:type owl:NamedIndividual ,
+                                :LightingCondition .
+
+
+###  https://example.org/traffic-accident-ontology#Dawn
+:Dawn rdf:type owl:NamedIndividual ,
+               :LightingCondition .
+
+
+###  https://example.org/traffic-accident-ontology#Daylight
+:Daylight rdf:type owl:NamedIndividual ,
+                   :LightingCondition .
+
+
+###  https://example.org/traffic-accident-ontology#Dry
+:Dry rdf:type owl:NamedIndividual ,
+              :RoadCondition .
+
+
+###  https://example.org/traffic-accident-ontology#Dusk
+:Dusk rdf:type owl:NamedIndividual ,
+               :LightingCondition .
+
+
+###  https://example.org/traffic-accident-ontology#FatalSeverityInstance
+:FatalSeverityInstance rdf:type owl:NamedIndividual ,
+                                :InjurySeverity .
+
+
+###  https://example.org/traffic-accident-ontology#Fog
+:Fog rdf:type owl:NamedIndividual ,
+              :WeatherCondition .
+
+
+###  https://example.org/traffic-accident-ontology#FollowingTooClosely
+:FollowingTooClosely rdf:type owl:NamedIndividual ,
+                              :Cause .
+
+
+###  https://example.org/traffic-accident-ontology#Headon
+:Headon rdf:type owl:NamedIndividual ,
+                 :CrashType .
+
+
+###  https://example.org/traffic-accident-ontology#Ice
+:Ice rdf:type owl:NamedIndividual ,
+              :RoadCondition .
+
+
+###  https://example.org/traffic-accident-ontology#ImproperTurningNoSignal
+:ImproperTurningNoSignal rdf:type owl:NamedIndividual ,
+                                  :Cause .
+
+
+###  https://example.org/traffic-accident-ontology#MinorSeverityInstance
+:MinorSeverityInstance rdf:type owl:NamedIndividual ,
+                                :InjurySeverity .
+
+
+###  https://example.org/traffic-accident-ontology#NoInjuryDriveAway
+:NoInjuryDriveAway rdf:type owl:NamedIndividual ,
+                            :CrashType .
+
+
+###  https://example.org/traffic-accident-ontology#NoInjurySeverityInstance
+:NoInjurySeverityInstance rdf:type owl:NamedIndividual ,
+                                   :InjurySeverity .
+
+
+###  https://example.org/traffic-accident-ontology#Rain
+:Rain rdf:type owl:NamedIndividual ,
+               :WeatherCondition .
+
+
+###  https://example.org/traffic-accident-ontology#RearEnd
+:RearEnd rdf:type owl:NamedIndividual ,
+                  :CrashType .
+
+
+###  https://example.org/traffic-accident-ontology#SevereSeverityInstance
+:SevereSeverityInstance rdf:type owl:NamedIndividual ,
+                                 :InjurySeverity .
+
+
+###  https://example.org/traffic-accident-ontology#Sidewipe
+:Sidewipe rdf:type owl:NamedIndividual ,
+                   :CrashType .
+
+
+###  https://example.org/traffic-accident-ontology#Snow
+:Snow rdf:type owl:NamedIndividual ,
+               :WeatherCondition .
+
+
+###  https://example.org/traffic-accident-ontology#SnowSlush
+:SnowSlush rdf:type owl:NamedIndividual ,
+                    :RoadCondition .
+
+
+###  https://example.org/traffic-accident-ontology#UnSafeSpeed
+:UnSafeSpeed rdf:type owl:NamedIndividual ,
+                      :Cause .
+
+
+###  https://example.org/traffic-accident-ontology#UnableToDetermine
+:UnableToDetermine rdf:type owl:NamedIndividual ,
+                            :Cause .
+
+
+###  https://example.org/traffic-accident-ontology#UnknownRoadCondition
+:UnknownRoadCondition rdf:type owl:NamedIndividual ,
+                               :RoadCondition .
+
+
+###  https://example.org/traffic-accident-ontology#UnknownWeather
+:UnknownWeather rdf:type owl:NamedIndividual ,
+                         :WeatherCondition .
+
+
+###  https://example.org/traffic-accident-ontology#WeatherCondition
+:WeatherCondition rdf:type owl:NamedIndividual .
+
+
+###  https://example.org/traffic-accident-ontology#Wet
+:Wet rdf:type owl:NamedIndividual ,
+              :RoadCondition .
+
+
+###  https://example.org/traffic-accident-ontology#accident1
+:accident1 rdf:type owl:NamedIndividual ,
+                    :Accident ;
+           :hasCause :UnableToDetermine ;
+           :hasCrashType :NoInjuryDriveAway ;
+           :hasRoadCondition :Dry ;
+           :hasSeverity :NoInjurySeverityInstance ;
+           :hasWeatherCondition :Clear ;
+           :accidentDateTime "2023-07-29T13:00:00Z"^^xsd:dateTime ;
+           :numberOfDeaths 0 ;
+           :numberOfInjured 0 ;
+           :numberOfVehicles 2 .
+
+
+###  https://example.org/traffic-accident-ontology#accident2
+:accident2 rdf:type owl:NamedIndividual ,
+                    :Accident ;
+           :hasCause :UnSafeSpeed ;
+           :hasCrashType :Headon ;
+           :hasRoadCondition :Wet ;
+           :hasSeverity :FatalSeverityInstance ;
+           :hasWeatherCondition :Rain ;
+           :accidentDateTime "2025-10-29T13:00:00Z"^^xsd:dateTime ;
+           :numberOfDeaths 1 ;
+           :numberOfInjured 0 ;
+           :numberOfVehicles 1 .
+
+
+###  https://example.org/traffic-accident-ontology#accident3
+:accident3 rdf:type owl:NamedIndividual ,
+                    :Accident ;
+           :hasCause :ImproperTurningNoSignal ;
+           :hasCrashType :Sidewipe ;
+           :hasRoadCondition :Wet ;
+           :hasSeverity :SevereSeverityInstance ;
+           :hasWeatherCondition :Clear ;
+           :accidentDateTime "2026-01-10T21:00:00Z"^^xsd:dateTime ;
+           :numberOfDeaths 0 ;
+           :numberOfInjured 1 ;
+           :numberOfVehicles 2 .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
