@@ -1,0 +1,749 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/"
+     xml:base="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/"
+     xmlns:ex="https://example.org/traffic/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:schema="https://schema.org/">
+    <owl:Ontology rdf:about="https://example.org/traffic-accident-ontology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/hasCause -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/hasCause">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/hasTrafficControlDevice"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Accident"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/hasCause"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Cause"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/hasCrashType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/hasCrashType">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/hasCrashType"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Accident"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/hasCrashType"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/CrashType"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/hasLightingCondition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/hasLightingCondition">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/hasLightingCondition"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Accident"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/hasLightingCondition"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/LightingCondition"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/hasRoadCondition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/hasRoadCondition">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/hasRoadCondition"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Accident"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/hasRoadCondition"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/RoadCondition"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/hasSeverity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/hasSeverity">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/hasSeverity"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Accident"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/hasSeverity"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/InjurySeverity"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/hasTrafficControlDevice -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/hasTrafficControlDevice">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/hasTrafficControlDevice"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Accident"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/hasTrafficControlDevice"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/TrafficControlDevice"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/hasVehicle -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/hasVehicle">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/hasVehicle"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Accident"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/hasVehicle"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Vehicle"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/hasWeatherCondition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/hasWeatherCondition">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/hasWeatherCondition"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Accident"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/hasWeatherCondition"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/WeatherCondition"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/occursAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/occursAt">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/occursAt"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Accident"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/occursAt"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Location"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/occursAtTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/occursAtTime">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/occursAtTime"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Accident"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/occursAt"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/TimeInstant"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/accidentDateTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/accidentDateTime">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Accident"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/numberOfDeaths -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/numberOfDeaths">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Accident"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/numberOfInjured -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/numberOfInjured">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Accident"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/numberOfVehicles -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/numberOfVehicles">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Accident"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Accident -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Accident">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/hasVehicle"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Vehicle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/hasWeatherCondition"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/WeatherCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/occursAtTime"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/TimeInstant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Event"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/hasSeverity"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/InjurySeverity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Cause -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Cause"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/CrashType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/CrashType"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Event -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Event"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/FatalAccident -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/FatalAccident">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Accident"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/FatalSeverity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/FatalSeverity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/InjurySeverity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/InjuryAccident -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/InjuryAccident">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Accident"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/InjurySeverity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/InjurySeverity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/LightingCondition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/LightingCondition"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Location"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/MinorSeverity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/MinorSeverity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/InjurySeverity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/NoInjuryAccident -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/NoInjuryAccident">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Accident"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/NoInjurySeverity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/NoInjurySeverity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/InjurySeverity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/RoadCondition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/RoadCondition"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/SevereSeverity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/SevereSeverity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/InjurySeverity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/TimeInstant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/TimeInstant"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/TrafficControlDevice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/TrafficControlDevice"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Vehicle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Vehicle"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/WeatherCondition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/WeatherCondition"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Angle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Angle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/CrashType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Clear -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Clear">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/WeatherCondition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/DarknessLightedRoad -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/DarknessLightedRoad">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/LightingCondition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/DarknessUnlightedRoad -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/DarknessUnlightedRoad">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/LightingCondition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Dawn -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Dawn">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/LightingCondition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Daylight -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Daylight">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/LightingCondition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Dry -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Dry">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/RoadCondition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Dusk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Dusk">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/LightingCondition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/FatalSeverityInstance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/FatalSeverityInstance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/InjurySeverity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Fog -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Fog">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/WeatherCondition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/FollowingTooClosely -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/FollowingTooClosely">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Cause"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Headon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Headon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/CrashType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Ice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Ice">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/RoadCondition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/ImproperTurningNoSignal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/ImproperTurningNoSignal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Cause"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/MinorSeverityInstance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/MinorSeverityInstance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/InjurySeverity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/NoInjuryDriveAway -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/NoInjuryDriveAway">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/CrashType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/NoInjurySeverityInstance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/NoInjurySeverityInstance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/InjurySeverity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Rain -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Rain">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/WeatherCondition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/RearEnd -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/RearEnd">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/CrashType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/SevereSeverityInstance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/SevereSeverityInstance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/InjurySeverity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Sidewipe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Sidewipe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/CrashType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Snow -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Snow">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/WeatherCondition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/SnowSlush -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/SnowSlush">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/RoadCondition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/UnSafeSpeed -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/UnSafeSpeed">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Cause"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/UnableToDetermine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/UnableToDetermine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Cause"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/UnknownRoadCondition -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/UnknownRoadCondition">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/RoadCondition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/UnknownWeather -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/UnknownWeather">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/WeatherCondition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/WeatherCondition -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/WeatherCondition"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Wet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Wet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/RoadCondition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/accident1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/accident1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Accident"/>
+        <hasCause rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/UnableToDetermine"/>
+        <hasCrashType rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/NoInjuryDriveAway"/>
+        <hasRoadCondition rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Dry"/>
+        <hasSeverity rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/NoInjurySeverityInstance"/>
+        <hasWeatherCondition rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Clear"/>
+        <accidentDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-07-29T13:00:00Z</accidentDateTime>
+        <numberOfDeaths rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</numberOfDeaths>
+        <numberOfInjured rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</numberOfInjured>
+        <numberOfVehicles rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</numberOfVehicles>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/accident2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/accident2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Accident"/>
+        <hasCause rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/UnSafeSpeed"/>
+        <hasCrashType rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Headon"/>
+        <hasRoadCondition rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Wet"/>
+        <hasSeverity rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/FatalSeverityInstance"/>
+        <hasWeatherCondition rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Rain"/>
+        <accidentDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-10-29T13:00:00Z</accidentDateTime>
+        <numberOfDeaths rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</numberOfDeaths>
+        <numberOfInjured rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</numberOfInjured>
+        <numberOfVehicles rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</numberOfVehicles>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/accident3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/accident3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Accident"/>
+        <hasCause rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/ImproperTurningNoSignal"/>
+        <hasCrashType rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Sidewipe"/>
+        <hasRoadCondition rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Wet"/>
+        <hasSeverity rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/SevereSeverityInstance"/>
+        <hasWeatherCondition rdf:resource="http://www.semanticweb.org/jump/ontologies/2026/2/untitled-ontology-22/Clear"/>
+        <accidentDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-10T21:00:00Z</accidentDateTime>
+        <numberOfDeaths rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</numberOfDeaths>
+        <numberOfInjured rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</numberOfInjured>
+        <numberOfVehicles rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</numberOfVehicles>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
