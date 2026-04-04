@@ -14,5 +14,3 @@ This repository contains the triplified version of a traffic accidents dataset.
 - SKOS
 - custom namespace: `ex:`
 
-## Live endpoint
-[
